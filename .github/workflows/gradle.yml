@@ -27,5 +27,5 @@ jobs:
          #3-Executing actionB 
             - name: Running actionB
             - uses: ./action-b
-            with:
+              with:
                 PARAM_VALUE: "Gradle 5.0"
