@@ -22,7 +22,7 @@ jobs:
             - name: Build with Gradle
               run : ./gradlew build
 
-         #3-Executing actionB 
+         #3-Executing action-B 
             - name: Running actionB
               uses: ./action-b
               with:
