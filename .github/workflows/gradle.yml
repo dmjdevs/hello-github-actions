@@ -14,26 +14,15 @@ jobs:
               uses: actions/setup-java@v1
               with:
                 java-version: 1.8
-<<<<<<< HEAD
-                
-=======
->>>>>>> c3561be1e00978376e92791b78db60c9f0fa9d28
+
          #2-Setting gradle definition
             - name: Grant permission for gradlew
               run : chmod +x gradlew
             - name: Build with Gradle
               run : ./gradlew build
-<<<<<<< HEAD
-               
-         3-Executing actionB 
-            - name: Running actionB
-            - uses: ./action-b
-              with:
-                MY_NAME: "Gradle 5.0"
-=======
+
          #3-Executing actionB 
             - name: Running actionB
             - uses: ./action-b
               with:
                 MY_NAME: "Gradle 5.0"
->>>>>>> c3561be1e00978376e92791b78db60c9f0fa9d28
