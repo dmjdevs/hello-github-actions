@@ -1,12 +1,13 @@
 name: Java C.I with Gradle
 on: 
     push:
-        branches: [$default-branch]
+        branches: [ $default-branch ]
     pull_request:
-        branches: [$default-branch]    
+        branches: [ $default-branch ]    
 jobs:
     build:
         runs-on: ubuntu-latest
+        
         #1-Setting java definition
         steps:
             - uses: actions/checkout@v2
@@ -23,6 +24,6 @@ jobs:
 
          #3-Executing actionB 
             - name: Running actionB
-            - uses: ./action-b
+              uses: ./action-b
               with:
                 MY_NAME: "Gradle 5.0"
