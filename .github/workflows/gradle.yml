@@ -6,6 +6,7 @@ on:
         #branches: [$default-branch]    
 jobs:
     build:
+        name:   Java C.I. Gradle
         runs-on: ubuntu-latest
         
         #1-Setting java definition
@@ -24,6 +25,6 @@ jobs:
 
          #3-Executing action-B 
             - name: Running actionB
-              uses: ./action-b
+            - uses: ./action-b
               with:
                 MY_NAME: "Gradle 5.0"
