@@ -3,8 +3,7 @@ on:
     push:
         branches: [$default-branch]
     pull_request:
-        branches: [$default-branch]
-        
+        branches: [$default-branch]    
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -20,7 +19,6 @@ jobs:
               run : chmod +x gradlew
             - name: Build with Gradle
               run : ./gradlew build
-               
          #3-Executing actionB 
          #   - name: Running actionB
          #   - uses: ./action-b
