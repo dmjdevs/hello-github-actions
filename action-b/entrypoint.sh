@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-sh -c "echo $INPUT_PARAM_VALUE"
+sh -c "echo $INPUT_MY_NAME"

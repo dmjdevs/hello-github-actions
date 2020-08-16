@@ -28,4 +28,4 @@ jobs:
             - name: Running actionB
             - uses: ./action-b
               with:
-                PARAM_VALUE: "Gradle 5.0"
+                MY_NAME: "Gradle 5.0"
