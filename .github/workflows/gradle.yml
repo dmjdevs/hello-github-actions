@@ -25,7 +25,7 @@ jobs:
               run : ./gradlew build
                
          #3-Executing actionB 
-            - name: Running actionB
-            - uses: ./action-b
-              with:
-                MY_NAME: "Gradle 5.0"
+         #   - name: Running actionB
+         #   - uses: ./action-b
+         #     with:
+         #       MY_NAME: "Gradle 5.0"
