@@ -3,22 +3,26 @@ name: Java CI
 on: [push]
 
 jobs:
-  build:
+  gradle:                           #---------------Replaced build:
+    
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Set up JDK 1.8
+      #1
+      - name: Set up JDK 1.8        #---------------or 11.0.6
         uses: actions/setup-java@v1
         with:
-          java-version: 1.8
+          java-version: 1.8         #---------------or 11 for ArcGIS
+      #2
       - name: Cache Gradle packages
         uses: actions/cache@v2
         with:
           path: ~/.gradle/caches
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
+      #3
       - name: Build with Gradle
-        run: ./gradlew build
-    
-    #rev11
+        uses: eskatos/gradle-command-action@v1
+        with:
+          arguments: build
