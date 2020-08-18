@@ -1,47 +1,12 @@
 plugins{
     id 'java-library'
-    //GIS Configurarion
-    id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.7'
 }
 
-//GIS configuration
-ext {
-        arcgisVersion = '100.7.0'
-}
 
 repositories {
     jcenter()
-    //GIS Configuration
-    maven {
-        url 'https://esri.bintray.com/arcgis'
-    }
-}
-
-//GIS Configuration
-configurations {
-    natives
 }
 
 
 dependencies {
-    //GIS Configuration
-    compile "com.esri.arcgisruntime:arcgis-java:$arcgisVersion"
-    natives "com.esri.arcgisruntime:arcgis-java-jnilibs:$arcgisVersion"
-    natives "com.esri.arcgisruntime:arcgis-java-resources:$arcgisVersion"
-}
-
-//GIS Configuration
-javafx {
-    version = "11.0.1"
-    modules = [ 'javafx.controls', 'javafx.web', 'javafx.fxml', 'javafx.media' ]
-}
-
-task copyNatives(type: Copy) {
-    description = "Copies the arcgis native libraries into the .arcgis directory for development."
-    group = "build"
-    configurations.natives.asFileTree.each {
-        from(zipTree(it))
-    }
-    into "${System.properties.getProperty("user.home")}/.arcgis/$arcgisVersion"
 }
