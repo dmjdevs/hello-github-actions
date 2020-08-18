@@ -25,5 +25,8 @@ jobs:
       - name: Build with Gradle
         uses: eskatos/gradle-command-action@v1
         with:
-          wrapper-directory: /opt/gradle/gradle-5.0/wrapper/
+          #wrapper-directory          : tests__/data/basic
+          #build-root-directory       : tests__/data/basic
+          dependencies-cache-enabled : true
+          configuration-cache-enabled: true
           arguments: build
