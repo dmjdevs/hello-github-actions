@@ -33,7 +33,7 @@ dependencies {
 
 //GIS Configuration
 javafx {
-    version = "11.0.6"
+    version = "11.0.1"
     modules = [ 'javafx.controls', 'javafx.web', 'javafx.fxml', 'javafx.media' ]
 }
 
