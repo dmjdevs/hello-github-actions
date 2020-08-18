@@ -1,4 +1,13 @@
+#Files
 *.swp
 .project
 *.class
-/bin/
+.classpath
+.project
+*.bin
+*.lock
+
+#Directories
+bin/
+.gradle/
+build/
